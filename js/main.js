@@ -72,4 +72,15 @@ function atualizaEstatisticas(peca, operacao) {
     });
 }
 
+const robotImages = ['img/robotron.png', './img/robotron-amarelo/amarelo.png', './img/robotron-azul/azul.png', './img/robotron-branco/branco.png', './img/robotron-preto/preto.png', './img/robotron-rosa/rosa.png', './img/robotron-vermelho/vermelho.png'];
+let currentRobotIndex = 0;
+
+function trocarRobo() {
+  const robotImageElement = document.getElementById('robotImage');
+  currentRobotIndex = (currentRobotIndex + 1) % robotImages.length;
+  console.log(currentRobotIndex);
+  robotImageElement.src = `${robotImages[currentRobotIndex]}`;
+}
+
+
 
